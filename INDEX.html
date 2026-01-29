@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+
+    <div class="avatar">👤</div>
+    <h2>Registration Form</h2>
+    <p class="subtitle">Create your account</p>
+
+    <form id="regForm">
+
+      <div class="row">
+        <div class="field">
+          <input type="text" id="fname" required>
+          <label>First Name</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="lname" required>
+          <label>Last Name</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <input type="email" id="email" required>
+        <label>Email</label>
+      </div>
+
+      <div class="field">
+        <input type="text" id="phone" required>
+        <label>Phone Number</label>
+      </div>
+
+      <div class="gender">
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+      </div>
+
+      <div class="field">
+        <input type="password" id="pass" required>
+        <label>Password</label>
+      </div>
+
+      <div class="field">
+        <input type="password" id="cpass" required>
+        <label>Confirm Password</label>
+      </div>
+
+      <div class="terms">
+        <input type="checkbox" id="terms">
+        <span>I agree to the <b>Terms & Conditions</b></span>
+      </div>
+
+      <button id="btn" disabled>Register</button>
+
+      <p id="msg"></p>
+
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

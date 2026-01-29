@@ -1,0 +1,181 @@
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#7b3fe4,#4f5cff);
+}
+
+.wrapper{
+  animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+.card{
+  background:white;
+  width:360px;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.avatar{
+  width:50px;
+  height:50px;
+  margin:auto;
+  border-radius:50%;
+  background:linear-gradient(135deg,#7b3fe4,#4f5cff);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+}
+
+h2{
+  text-align:center;
+  margin:15px 0 5px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#777;
+  margin-bottom:20px;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+}
+
+.field{
+  position:relative;
+  margin-bottom:18px;
+  flex:1;
+}
+
+.field input{
+  width:100%;
+  padding:12px;
+  border:2px solid #ddd;
+  border-radius:10px;
+  outline:none;
+  transition:.3s;
+}
+
+.field label{
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#888;
+  pointer-events:none;
+  transition:.3s;
+  background:white;
+  padding:0 5px;
+}
+
+.field input:focus,
+.field input:valid{
+  border-color:#6a5cff;
+}
+
+.field input:focus + label,
+.field input:valid + label{
+  top:-6px;
+  font-size:12px;
+  color:#6a5cff;
+}
+
+.gender{
+  display:flex;
+  justify-content:space-around;
+  margin-bottom:15px;
+}
+
+.gender label{
+  cursor:pointer;
+}
+
+.terms{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#7b3fe4,#4f5cff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 15px rgba(0,0,0,.2);
+}
+
+button:disabled{
+  background:#aaa;
+  transform:none;
+  box-shadow:none;
+}
+
+#msg{
+  text-align:center;
+  margin-top:10px;
+  color:green;
+}
+
+/* Card hover */
+.card:hover{
+  transform:translateY(-4px);
+  transition:.3s;
+}
+
+/* Avatar blow up */
+.avatar{
+  transition:.3s;
+}
+
+.avatar:hover{
+  transform:scale(1.15);
+}
+
+/* Input hover effect */
+.field input{
+  transition:.25s;
+}
+
+.field input:hover{
+  border-color:#6a5cff;
+  box-shadow:0 0 8px rgba(106,92,255,.4);
+  transform:translateY(-1px);
+}
+
+/* Gender hover */
+.gender label:hover{
+  color:#6a5cff;
+}
+
+/* Terms hover */
+.terms:hover{
+  color:#6a5cff;
+}
